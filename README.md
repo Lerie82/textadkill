@@ -19,8 +19,4 @@ I ad sites as I get them. Future versions may have implementations for "shared" 
 - origami-instructions.com
 - textnow.com
 - textfree.us
-<<<<<<< HEAD
 - genuis.com
-=======
-- genius.com
->>>>>>> 3f5e6ca837b7105f3ea30f1ca406574d0dc41417
