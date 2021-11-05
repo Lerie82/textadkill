@@ -1,12 +1,27 @@
-let killBtn = document.getElementById("btnKillAds");
+/* Lerie Taylor 2021 */
 
+let killBtn = document.getElementById("btnKillAds");
+let supportBtn = document.getElementById("btnSupport");
+let txtCurSite = document.getElementById("txtCurSite");
 
 killBtn.addEventListener("click", async () => {
+    killDivGpt();
+
     let [tab] = await chrome.tabs.query({
         active: true,
         currentWindow: true
     });
 
+    txtCurSite.value = tab.url;
+
+    if (tab.url.includes("torrentgalaxy")) {
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killTGAds,
+        });
+    }
 
     if (tab.url.includes("origami")) {
         chrome.scripting.executeScript({
@@ -17,14 +32,14 @@ killBtn.addEventListener("click", async () => {
         });
     }
 
-    if (tab.url.includes("stonewallinstitute")) {
+    /*if (tab.url.includes("stonewallinstitute")) {
         document.onreadystatechange = () => {
             if (document.readyState === 'complete') {
                 checkpointIds = [];
                 progressTime += 9999999;
             }
         };
-    }
+    }*/
 
     if (tab.url.includes("textnow")) {
         chrome.scripting.executeScript({
@@ -52,16 +67,54 @@ killBtn.addEventListener("click", async () => {
             function: killLyricsAds,
         });
     }
-
-    if (tab.url.includes("pornhub")) {
-        chrome.scripting.executeScript({
-            target: {
-                tabId: tab.id
-            },
-            function: killPornHubAds,
-        });
-    }
 });
+
+//https://stackoverflow.com/questions/16791527/can-i-use-a-regular-expression-in-queryselectorall
+function DOMRegex(regex) {
+    let output = [];
+    for (let i of document.querySelectorAll('*')) {
+        for (let j of i.attributes) {
+            if (regex.test(j.value)) {
+                output.push({
+                    'element': i,
+                    'attribute name': j.name,
+                    'attribute value': j.value
+                });
+            }
+        }
+    }
+    return output;
+}
+
+function killTGAds()
+{
+    //overlay
+    document.body.className = document.body.className.replace("txlight","");
+
+    //
+    document.querySelectorAll("iframe")[2].remove();
+    document.querySelector("#AdskeeperComposite385455").remove();
+    document.querySelector("#panelmain").remove();
+}
+
+function killDivGpt()
+{
+    //div-gpt-ad-1615231889704-0
+    var r = DOMRegex(/div[-]gpt[-]ad[-]\d+[-]\d/);
+    var selectors = [];
+
+    r.forEach(element => {
+        selectors.push(element.id);
+    });
+
+    selectors.forEach((x, i) => {
+        const a = document.querySelector(x);
+
+        if (a !== null) {
+            a.parentElement.removeChild(a);
+        }
+    });
+}
 
 function killPornHubiAds() {
 

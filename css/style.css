@@ -1,0 +1,20 @@
+#btnMenu button {
+  background-color: #6c63ff;
+  color: #fff;
+  width: 300px;
+  height: 2rem;
+  border:  1px solid #3f3d56;
+}
+
+#container {
+  margin: 1em;
+}
+
+#info {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#info label {
+  display: inline-block;
+}

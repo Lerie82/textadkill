@@ -1,12 +1,12 @@
 {
   "name": "TextAdKill",
-  "description": "This extension will kill the ad clogged screens on some popular websites.",
-  "version": "1.0",
+  "description": "This extension will kill ads on popular websites with a single click.",
+  "version": "0.3",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "js/background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "permissions": ["activeTab", "scripting", "tabs"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
