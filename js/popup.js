@@ -14,6 +14,16 @@ killBtn.addEventListener("click", async () => {
 
     txtCurSite.value = tab.url;
 
+    if(tab.url.includes("fandom.com"))
+    {
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killFandomAds,
+        });
+    }
+
     if (tab.url.includes("torrentgalaxy")) {
         chrome.scripting.executeScript({
             target: {
@@ -95,6 +105,16 @@ function killTGAds()
     document.querySelectorAll("iframe")[2].remove();
     document.querySelector("#AdskeeperComposite385455").remove();
     document.querySelector("#panelmain").remove();
+}
+
+function killFandomAds()
+{
+    //
+    document.querySelector("#ds_cpp").remove();
+    document.querySelector(".page__right-rail").remove();
+    document.querySelector(".mcf-wrapper").remove();
+    document.querySelector(".bottom-ads-container").remove();
+    document.querySelector(".ad-slot-placeholder").remove();
 }
 
 function killDivGpt()
