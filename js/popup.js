@@ -14,6 +14,15 @@ killBtn.addEventListener("click", async () => {
 
     txtCurSite.value = tab.url;
 
+    if (tab.url.includes("tutorialspoint")) {
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killTPAds,
+        });
+    }
+
     if(tab.url.includes("fandom.com"))
     {
         chrome.scripting.executeScript({
@@ -94,6 +103,15 @@ function DOMRegex(regex) {
         }
     }
     return output;
+}
+
+function killTPAds()
+{
+    document.querySelector("#google-right-ads").remove();
+    document.querySelector("#google-top-ads").remove();
+    document.querySelector("#ad_unit").remove();
+    document.querySelector("#google-bottom-ads").remove();
+    document.querySelector("#sticky-ad").remove();
 }
 
 function killTGAds()
