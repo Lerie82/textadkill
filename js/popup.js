@@ -14,6 +14,15 @@ killBtn.addEventListener("click", async () => {
 
     txtCurSite.value = tab.url;
 
+    if (tab.url.includes("pornhub")) {
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killPornHubAds,
+        });
+    }
+
     if (tab.url.includes("tutorialspoint")) {
         chrome.scripting.executeScript({
             target: {
@@ -154,7 +163,7 @@ function killDivGpt()
     });
 }
 
-function killPornHubiAds() {
+function killPornHubAds() {
 
     var thumbads = document.querySelectorAll('.thumb-ad');
     thumbads.forEach((x, i) => {
