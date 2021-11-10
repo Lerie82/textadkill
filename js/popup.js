@@ -14,6 +14,16 @@ killBtn.addEventListener("click", async () => {
 
     txtCurSite.value = tab.url;
 
+    if(tab.url.includes("chess.com"))
+    {
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killChessAds,
+        });
+    }
+
     if (tab.url.includes("pornhub")) {
         chrome.scripting.executeScript({
             target: {
@@ -114,6 +124,11 @@ function DOMRegex(regex) {
     return output;
 }
 
+function killChessAds()
+{
+    document.querySelector("#google-right-ads").remove();
+}
+
 function killTPAds()
 {
     document.querySelector("#google-right-ads").remove();
@@ -136,12 +151,12 @@ function killTGAds()
 
 function killFandomAds()
 {
-    //
     document.querySelector("#ds_cpp").remove();
     document.querySelector(".page__right-rail").remove();
     document.querySelector(".mcf-wrapper").remove();
     document.querySelector(".bottom-ads-container").remove();
     document.querySelector(".ad-slot-placeholder").remove();
+    document.querySelector(".notifications-placeholder").remove();
 }
 
 function killDivGpt()
