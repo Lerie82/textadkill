@@ -1,7 +1,10 @@
-/* Lerie Taylor 2021 */
+/*
+Lerie Taylor 2021,2022
+lerietaylor.com
+*/
 
 let killBtn = document.getElementById("btnKillAds");
-let supportBtn = document.getElementById("btnSupport");
+/*let supportBtn = document.getElementById("btnSupport");*/
 let txtCurSite = document.getElementById("txtCurSite");
 
 killBtn.addEventListener("click", async () => {
@@ -21,6 +24,27 @@ killBtn.addEventListener("click", async () => {
                 tabId: tab.id
             },
             function: killChessAds,
+        });
+    }
+
+
+    if(tab.url.includes("pof.com"))
+    {
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killPofAds,
+        });
+    }
+
+    if(tab.url.includes("bloomberg.com"))
+    {
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killBloomberg,
         });
     }
 
@@ -124,6 +148,12 @@ function DOMRegex(regex) {
     return output;
 }
 
+function killPofAds() {
+    document.querySelector(".css-16rssz5").remove();
+    document.querySelector(".css-1yjr9ye").remove();
+    document.querySelector(".css-1e6y1xp").remove();
+}
+
 function killChessAds()
 {
     document.querySelector("#google-right-ads").remove();
@@ -136,6 +166,15 @@ function killTPAds()
     document.querySelector("#ad_unit").remove();
     document.querySelector("#google-bottom-ads").remove();
     document.querySelector("#sticky-ad").remove();
+}
+
+function killBloomberg()
+{
+    document.querySelector("#fortress-paywall-container-root").remove();
+    document.querySelector("#plug-banner-outlet").remove();
+    document.querySelector(".trc_rbox_container").remove();
+    document.querySelector("aside.right-rail").remove();
+    document.querySelector("#viewport").remove();
 }
 
 function killTGAds()
