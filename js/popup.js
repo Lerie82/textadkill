@@ -17,6 +17,16 @@ killBtn.addEventListener("click", async () => {
 
     txtCurSite.value = tab.url;
 
+    if(tab.url.includes("pngtosvg.com"))
+    {
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killPngAds,
+        });
+    }
+
     if(tab.url.includes("chess.com"))
     {
         chrome.scripting.executeScript({
@@ -26,7 +36,6 @@ killBtn.addEventListener("click", async () => {
             function: killChessAds,
         });
     }
-
 
     if(tab.url.includes("pof.com"))
     {
@@ -146,6 +155,12 @@ function DOMRegex(regex) {
         }
     }
     return output;
+}
+
+function killPngAds() {
+    document.querySelector(".ezoic-ad").remove();
+    document.querySelector(".google-center-div").remove();
+    document.querySelector(".page-wrap").remove();
 }
 
 function killPofAds() {
