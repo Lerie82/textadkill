@@ -138,6 +138,15 @@ killBtn.addEventListener("click", async () => {
             function: killLyricsAds,
         });
     }
+
+    if (tab.url.includes("fluttercorner")) {
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killFlutterCornerAds,
+        });
+    }
 });
 
 //https://stackoverflow.com/questions/16791527/can-i-use-a-regular-expression-in-queryselectorall
@@ -155,6 +164,12 @@ function DOMRegex(regex) {
         }
     }
     return output;
+}
+
+function killFlutterCornerAds() {
+    document.querySelector("#right-sidebar").remove();
+    document.querySelector("#aswift_5").remove();
+    document.querySelector("#aswift_6_expand").remove();
 }
 
 function killPngAds() {
