@@ -1,7 +1,9 @@
 ## TextAdKill
 2021-2022
 
-This is a Chrome Extension that will remove ads from websites that normally have super laggy UI and functionality. This is due to the amount of advertisements above (and below) the fold when you are visiting the website. This extension is still in a very early release, but it's open source, so why not just push it. The name **TextAdKill** is the name the software was given when all it did was sit there and kill the rotating advertisements on free texting platforms, and it doesn't need to change.
+![This is an image](https://badgen.net/github/release/lerie82/textadkill)
+
+This is a Chrome Extension that will remove ads from websites that normally have super laggy UI and functionality. This is due to the amount of advertisements above (and below) the fold when you are visiting the website. The name is from my old software I created that would kill just ads on texting based websites (such as "pinger type" sites).
 
 ### Chrome Web Store
 You can download the extension from the Web Store here: https://chrome.google.com/webstore/detail/textadkill/hjebehoaeafhflpfimaiegaadhblidfp?hl=en&authuser=0
