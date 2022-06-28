@@ -1,11 +1,8 @@
-/*
-Lerie Taylor 2021,2022
-lerietaylor.com
-*/
+/* textadkill, Lerie Taylor: 2021,2022 lerietaylor.com */
 {
   "name": "TextAdKill",
-  "description": "This extension will kill ads on popular websites with a single click.",
-  "version": "0.4",
+  "description": "This extension will kill ads on websites with a single click.",
+  "version": "1.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "js/background.js"
