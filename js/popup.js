@@ -186,7 +186,11 @@ function killPofAds() {
 
 function killChessAds()
 {
-    document.querySelector("#google-right-ads").remove();
+   	//document.querySelector("#google-right-ads").remove();
+	document.querySelector('.sidebar-ad').remove();
+	document.querySelector('.index-content-ad-wrapper').remove();
+	document.querySelector('.short-sidebar-ad-component.short-sidebar-ad-top').remove();
+	document.querySelector('.short-sidebar-ad-component.short-sidebar-ad-bottom').remove();
 }
 
 function killTPAds()

@@ -20,5 +20,3 @@ chrome://extensions/
 
 ### Supported Sites
 I add sites as I get them by request or if I happen to need one and make one.
-
-tutorialspoint, torrentgalaxy, origami-instructions, textnow, textfree, genuis, fandom, pornhub, lyrics
