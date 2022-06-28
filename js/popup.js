@@ -4,11 +4,25 @@ lerietaylor.com
 */
 
 let killBtn = document.getElementById("btnKillAds");
-/*let supportBtn = document.getElementById("btnSupport");*/
 let txtCurSite = document.getElementById("txtCurSite");
 
+//adName = "pngtosvg.com"
+function execKillAds(adName)
+{
+    if(tab.url.includes(adName))
+    {
+	//get the lines for ("killPngAds")
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: killPngAds,
+        });
+    }
+}
+
 killBtn.addEventListener("click", async () => {
-    killDivGpt();
+    //killDivGpt();
 
     let [tab] = await chrome.tabs.query({
         active: true,
