@@ -14,6 +14,14 @@ btnKillAds.addEventListener("click", async () => {
 
 function killAds() {
 	var ads = [
+		'.video-ad',
+		'.thumb-block.thumb-ad.thumb-nat-ad.no-rotate.tb_full_init',
+		'#ad-footer',
+		'.game-over-ad-component',
+		'.bxc',
+		'.celtra-ad-inline-host',
+		'.ad ad--epic.ad--desktop2',
+		'.ad.ad--epic.ad--desktop',
 		'.content-ad-content',
 		'.short-sidebar-ad-component.short-sidebar-ad-top',
 		'.short-sidebar-ad-component.short-sidebar-ad-bottom',
