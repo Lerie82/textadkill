@@ -22,6 +22,3 @@ You can paste the link below in your Chrome browser to bring up the Extensions S
 ```
 chrome://extensions/
 ```
-
-### Supported Sites
-I add sites as I get them by request or if I happen to need one and make one.

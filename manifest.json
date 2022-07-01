@@ -2,12 +2,12 @@
 {
   "name": "TextAdKill",
   "description": "This extension will kill ads on websites with a single click.",
-  "version": "0.3",
+  "version": "0.4",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["activeTab", "scripting", "tabs","webNavigation"],
+  "permissions": ["scripting","activeTab","tabs"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
