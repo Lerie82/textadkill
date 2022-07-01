@@ -19,7 +19,17 @@ function killAds() {
 		'.short-sidebar-ad-component.short-sidebar-ad-bottom',
 		'.sidebar-ad',
 		'.index-content-ad-wrapper',
-		'.col-are-ads.ng-isolate-scope'
+		'.col-are-ads.ng-isolate-scope',
+		'.uEierd',
+		'.ads',
+		'.downloadnews',
+		'.ezoic-ad',
+		'#div-gpt-ad-1387773334918-0',
+		'.ezoic-pub-ad-placeholder-109',
+		'.ezoic-adpicker-ad',
+		'.ezmob-footer.ezoic-floating-bottom.ezo_ad.ezmob-footer-desktop',
+		'#rightad',
+		'#div-gpt-ad-1387773334918-1'
 	];
 
 	ads.forEach((ad) => {
