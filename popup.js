@@ -9,11 +9,17 @@ btnKillAds.addEventListener("click", async () => {
     target: { tabId: tab.id },
     function: killAds,
   });
-
 });
 
 function killAds() {
 	var ads = [
+		'#vi-smartbanner',
+		'.a-wrap',
+		'.adsbyvli',
+		'.col-4.main-sidebar.has-sep',
+		'.adsbyvli.vliinterstial',
+		'.adsbyvli.videoslider',
+		'.a-wrap.a-wrap-base.a-wrap-5',
 		'.video-ad',
 		'.thumb-block.thumb-ad.thumb-nat-ad.no-rotate.tb_full_init',
 		'#ad-footer',
