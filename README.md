@@ -21,4 +21,11 @@ chrome://extensions/
 ```
 
 ## Websites
-I don't have a current list of websites but there are a few that I personally use frequently such as chess.com, textfree.us, textnow.com, cnn.com, pngtosvg.com, and even some of the Google search ads can be removed using Textadkill. 
+I don't have a current list of websites but there are a few that I personally use.
+
+- chess.com
+- pngtosvg.com
+- textfree
+- textnow
+- css
+- google search
