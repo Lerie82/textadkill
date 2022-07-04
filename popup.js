@@ -13,6 +13,8 @@ btnKillAds.addEventListener("click", async () => {
 
 function killAds() {
 	var ads = [
+		'.rotation-manager-slot',
+		'.rotation-manager-slot-wrapper',
 		'#vi-smartbanner',
 		'.a-wrap',
 		'.adsbyvli',
