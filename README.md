@@ -24,8 +24,10 @@ chrome://extensions/
 I don't have a current list of websites but there are a few that I personally use.
 
 - chess.com
+- tutorialspoint
 - pngtosvg.com
 - textfree
 - textnow
 - css
 - google search
+- guru99

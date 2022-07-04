@@ -13,7 +13,13 @@ btnKillAds.addEventListener("click", async () => {
 
 function killAds() {
 	var ads = [
-		'.rotation-manager-slot',
+		'.videocontentmobile',
+		'#div-gpt-ad-1565016699961-0',
+		'#secondary',
+		'#google-bottom-ads',
+		'#sticky-ad',
+		'#google-top-ads',
+		'#google-right-ads',
 		'.rotation-manager-slot-wrapper',
 		'#vi-smartbanner',
 		'.a-wrap',
